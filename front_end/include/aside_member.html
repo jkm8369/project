@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <!-- 폰트 적용을 위해 추가 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- 분리된 CSS 파일을 연결합니다. -->
+    <link rel="stylesheet" href="aside_member_style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+
+        <!-- 1. 프로필 섹션 -->
+        <section class="profile-section">
+            <!-- 중요: 이 부분의 src를 실제 이미지 파일 경로로 수정하세요 -->
+            <img src="https://i.imgur.com/kY9L6Kz.png" alt="프로필 아이콘" class="profile-icon">
+            <div class="user-details">
+                <p class="user-name">홍길동</p>
+                <p class="user-role">(회원)</p>
+            </div>
+        </section>
+
+        <!-- 2. 트레이너 정보 섹션 -->
+        <section class="trainer-info">
+             <!-- 중요: 이 부분의 src를 실제 이미지 파일 경로로 수정하세요 -->
+            <img src="https://i.imgur.com/9vJqL7m.png" alt="체크 아이콘" class="check-icon">
+            <span>1 Trainer</span>
+        </section>
+
+        <!-- 3. 네비게이션(메뉴) 섹션 -->
+        <nav class="pages-nav">
+            <h2 class="nav-title">Pages</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                         <!-- 중요: 아래 이미지들의 src를 실제 파일 경로로 수정하세요 -->
+                        <img src="https://i.imgur.com/8Q8o3tY.png" alt="운동일지 아이콘">
+                        <span>운동일지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://i.imgur.com/1B3j3gE.png" alt="인바디 아이콘">
+                        <span>InBody & Meal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://i.imgur.com/2Yc4s9A.png" alt="사진 아이콘">
+                        <span>사진</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://i.imgur.com/6X9mY7f.png" alt="예약현황 아이콘">
+                        <span>예약현황</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="#">
+                        <img src="https://i.imgur.com/C5m3fJj.png" alt="운동종류 아이콘">
+                        <span>운동종류</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+</body>
+</html>
