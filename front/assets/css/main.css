@@ -1,3 +1,4 @@
+/* 메인페이지에서만 사용 */
 .wrap {
   background-color: #ffffff;
   display: grid;
@@ -675,7 +676,7 @@
 }
 
 .wrap .button {
-  all: unset;
+  all: unset;    /*브라우저의 기본 스타일 요소 다 없애고 싶을 때*/
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
