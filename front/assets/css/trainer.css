@@ -1,0 +1,276 @@
+/* html과 body가 화면 전체를 차지하도록 설정합니다. */
+html,
+body {
+  width: 1920px;
+  height: 1357px;
+  margin: 0;
+  background-color: #ffffff; /* 전체 배경색 */
+
+  /* Flexbox를 사용하여 내부 요소를 화면 정중앙에 배치합니다. */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 중앙에 위치할 진한 하늘색 직사각형 스타일 */
+.main-rectangle {
+  width: 996px;
+  height: 1215.19px;
+  background-color: #f6f9fc; /* 진한 하늘색 (CornflowerBlue) */
+
+  /* 그림자 효과를 추가하여 눈에 잘 띄게 합니다. */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 이 아래로 새로운 스타일 추가 --- */
+
+/* 기존 main-rectangle 스타일 수정: 내부 콘텐츠 정렬을 위해 flex 추가 */
+.main-rectangle {
+  /* 기존 스타일은 그대로 두고 아래 3줄만 추가하세요. */
+  display: flex;
+  flex-direction: column; /* 아이템을 세로로 쌓음 */
+  align-items: center; /* 가로 중앙 정렬 */
+  padding-top: 40px; /* 위쪽 여백 추가 */
+  box-sizing: border-box; /* 패딩이 크기에 영향을 주지 않도록 설정 */
+  position: relative;
+}
+
+/* 1. 달력 임시 영역 스타일 */
+.calendar-placeholder {
+  width: 912px;
+  height: 720px;
+  background-color: #ffffff; /* 임시로 흰색 배경 지정 */
+  border: 1px dashed #ccc; /* 임시 영역임을 표시하는 점선 테두리 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 24px;
+}
+
+/* 2. 구분선 스타일 */
+.divider {
+  width: 912px;
+  height: 1px;
+  background-color: #ababab; /* 연한 회색 */
+  margin: 40px 0; /* 위아래로 40px 여백 */
+}
+
+/* 3. 회원수업 리스트 섹션 스타일 */
+.member-list-section {
+  width: 912px;
+  /* --- 테두리 관련 스타일 추가 --- */
+  background-color: #ffffff;
+  border: 1px solid #ababab; /* 옅은 회색 테두리 */
+  border-radius: 12px; /* 모서리를 부드럽게 (12px) */
+  padding: 5px 20px 5px 30px;
+  box-sizing: border-box; /* 패딩과 테두리가 너비에 영향을 주지 않도록 설정 */
+}
+
+.list-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px; /* 제목과 테이블 사이 여백 */
+}
+
+.member-table {
+  width: 100%;
+  border-collapse: collapse; /* 테이블 선을 한 줄로 합침 */
+  text-align: center; /* 기본 텍스트 정렬을 중앙으로 */
+}
+
+/* 테이블 헤더(th)와 데이터(td) 공통 스타일 */
+.member-table th,
+.member-table td {
+  padding: 18px 10px; /* 셀 내부 여백 */
+  font-size: 16px;
+  vertical-align: middle; /* 세로 중앙 정렬 */
+}
+
+/* 테이블 헤더(제목) 스타일 */
+.member-table th {
+  font-weight: bold;
+  color: #222;
+}
+
+/* 테이블 데이터(내용) 스타일 */
+.member-table td {
+  color: #555;
+}
+
+/* '홍길동' 이름에만 적용된 링크 스타일 */
+.member-table td a {
+  color: inherit; /* 부모(td)의 글자색을 그대로 사용 */
+  text-decoration: underline; /* 밑줄 표시 */
+}
+
+/* 테이블의 마지막 셀(잔여일수+버튼) 레이아웃 조정 */
+.member-table tbody td:last-child {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 15px; /* '00회' 텍스트와 '취소' 버튼 사이의 간격 */
+}
+
+/* 취소 버튼 스타일 */
+.cancel-btn {
+  background-color: #f1f3f5; /* 옅은 회색 배경 */
+  border: 1px solid #dee2e6; /* 배경보다 약간 진한 테두리 */
+  border-radius: 5px; /* 살짝 둥근 모서리 */
+
+  /* 폰트 크기와 비슷하게 보이도록 패딩과 폰트 사이즈 조정 */
+  padding: 3px 10px;
+  font-size: 14px;
+  font-family: inherit; /* 테이블의 기본 폰트를 따라가도록 설정 */
+
+  color: #495057; /* 버튼 글자색 */
+  cursor: pointer; /* 마우스를 올리면 손가락 모양으로 변경 */
+  transition: background-color 0.2s; /* 부드러운 색상 변경 효과 */
+}
+
+/* 마우스를 올렸을 때 버튼 스타일 */
+.cancel-btn:hover {
+  background-color: #e9ecef; /* 약간 더 진한 회색으로 변경 */
+}
+
+/*************************member*************************/
+/* 페이지 헤더 (Members, 날짜) 컨테이너 */
+.page-header {
+  text-align: center; /* 내부 텍스트들을 중앙 정렬 */
+  margin-bottom: 40px; /* 헤더와 아래 리스트 박스 사이의 간격 */
+}
+
+/* "Members" 제목 스타일 */
+.page-title {
+  font-size: 42px;
+  font-weight: 600; /* Semi-bold */
+  color: #526b80; /* 이미지와 유사한 차분한 파란색 */
+  margin: 0 0 10px 0; /* 위/좌우 여백 없음, 아래쪽만 10px 여백 */
+}
+
+/* "2025년 7월 20일" 날짜 스타일 */
+.page-subtitle {
+  font-size: 18px;
+  color: #8a9aaa; /* 제목보다 옅은 회색빛 파란색 */
+  margin: 0; /* 기본 p 태그의 여백 제거 */
+}
+
+.member-management-area {
+  display: flex;
+  flex-direction: column; /* 리스트와 버튼을 세로로 배치 */
+  align-items: flex-end; /* 내부 아이템들을 오른쪽으로 정렬 (버튼을 우측 끝으로 보냄) */
+  gap: 15px; /* 리스트와 버튼 사이의 간격 */
+}
+
+/* 회원 등록 버튼 (디자인 전면 수정) */
+.add-member-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 아이콘과 텍스트 사이 간격 */
+
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc; /* 옅은 회색 테두리 */
+  border-radius: 8px; /* 둥근 모서리 */
+
+  padding: 10px 18px; /* 버튼 내부 여백 */
+
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #333333;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+/* 버튼 아이콘 스타일 */
+.add-member-btn i {
+  font-size: 17px;
+}
+
+/* 마우스를 올렸을 때 버튼 스타일 */
+.add-member-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #c0c0c0; /* 테두리를 약간 더 진하게 */
+  transform: translateY(-1px); /* 살짝 위로 뜨는 효과 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+/*************************member*************************/
+
+/*************************exercise*************************/
+/* 운동 항목들을 담는 그리드 컨테이너 (ul 태그용 스타일) */
+/* --- 이 아래로 운동 종류 리스트 스타일 추가 --- */
+
+/* 운동 종류 리스트 전체 컨테이너 */
+.exercise-list-container {
+    margin-top: 50px; /* 위쪽 회원 리스트와의 간격 */
+    background-color: #fdfdff; /* 살짝 푸른빛이 도는 흰색 */
+    border: 2px solid #aedcff; /* 밝은 파란색 테두리 */
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+/* 운동종류 수정 버튼이 있는 헤더 */
+.exercise-list-header {
+    display: flex;
+    justify-content: flex-end; /* 버튼을 오른쪽으로 정렬 */
+    margin-bottom: 20px;
+}
+
+/* 운동종류 수정 버튼 */
+.btn-edit-exercises {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 아이콘과 텍스트 사이 간격 */
+
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc; /* 옅은 회색 테두리 */
+  border-radius: 8px; /* 둥근 모서리 */
+
+  padding: 10px 18px; /* 버튼 내부 여백 */
+
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #333333;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
+}
+.btn-edit-exercises:hover {
+    background-color: #e4e9ed;
+}
+
+/* 각 운동 카테고리 (가슴, 등, 어깨) */
+.exercise-category {
+    margin-bottom: 30px; /* 구분선과의 간격 */
+}
+
+/* 카테고리 제목 (가슴, 등, 어깨) */
+.category-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 30px 0;
+}
+
+/* 운동 항목들을 담는 그리드 컨테이너 */
+.exercise-grid {
+    /* ul 태그의 기본 스타일 초기화 */
+    list-style: none; /* 목록 앞의 점 제거 */
+    padding: 0;       /* 왼쪽 기본 여백 제거 */
+    margin: 0;        /* 기본 마진 제거 */
+    
+    /* 기존 Grid 스타일 유지 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 40px; 
+}
+
+/* 개별 운동 항목 */
+.exercise-item {
+    font-size: 17px;
+    color: #444;
+}
+/*************************exercise*************************/
