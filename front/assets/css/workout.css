@@ -1,183 +1,304 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* 문자 인코딩 설정 */
 
+/* ===== 공통 변수 정의 ===== */
 :root {
-    --primary: #0066cc;
-    --background: #f9fbfc;
-    --gray: #6b7280;
-    --border-radius: 12px;
-    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    --font: 'Pretendard', sans-serif;
+    --primary: #0066cc; /* 주요 테마 색상 (파란색) */
+    --background: #f9fbfc; /* 페이지 배경색 */
+    --gray: #6b7280; /* 회색 글자 */
+    --border-radius: 12px; /* 박스 둥글기 */
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+    --font: 'Pretendard', sans-serif; /* 기본 글꼴 */
 }
 
+/* ===== 공통 초기화 ===== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font);
+    box-sizing: border-box; /* padding, border 포함한 사이즈 계산 */
+    margin: 0; /* 바깥 여백 제거 */
+    padding: 0; /* 안쪽 여백 제거 */
+    font-family: var(--font); /* 공통 폰트 적용 */
 }
 
 body {
-    background: white;
-    color: #1f1f1f;
+    background: var(--background);
     width: 100%;
-    display: flex;
-    justify-content: center;
+    min-width: 1920px;
+    margin: 0;
+    padding: 0;
 }
-
+  
 #wrap {
-    width: 1200px;
-    min-height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
 }
 
+/* ===== 헤더 ===== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #e5e7eb;
+    display: flex; /* 로고와 버튼 나란히 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: center; /* 세로 정렬 */
+    padding: 20px; /* 안쪽 여백 */
+    border-bottom: 1px solid #e5e7eb; /* 아래 테두리 */
 }
 
 header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary);
+    font-size: 24px; /* 글자 크기 */
+    font-weight: bold; /* 굵은 글씨 */
+    color: var(--primary); /* 메인 컬러 */
 }
 
 header .logo span {
-    color: #1f1f1f;
+    color: #1f1f1f; /* 검정에 가까운 진회색 */
 }
 
 header .logout {
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--gray);
+    font-size: 14px; /* 버튼 글자 크기 */
+    background: transparent; /* 배경 없음 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 마우스 올리면 손 모양 */
+    color: var(--gray); /* 회색 글자 */
 }
 
+/* ===== 콘텐츠 전체 ===== */
 #content {
-    display: flex;
+    display: flex; /* aside와 main 나란히 배치 */
+    width: 100%;
 }
 
+/* 페이지 헤더 (Members, 날짜) 컨테이너 */
+.page-header {
+    width: 980px;
+    text-align: center; /* 내부 텍스트들을 중앙 정렬 */
+    margin-bottom: 60px; /* 헤더와 아래 리스트 박스 사이의 간격 */
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 600; /* Semi-bold */
+    color: #526b80; /* 이미지와 유사한 차분한 파란색 */
+    margin: 0 0 10px 0; /* 위/좌우 여백 없음, 아래쪽만 10px 여백 */
+}
+  
+/* "2025년 7월 20일" 날짜 스타일 */
+.page-subtitle {
+    font-size: 18px;
+    color: #8a9aaa; /* 제목보다 옅은 회색빛 파란색 */
+    margin: 0; /* 기본 p 태그의 여백 제거 */
+}
+
+/* ===== 사이드바 ===== */
 aside {
-    width: 200px;
+    width: 201px;
+    height: 487px; /* 고정 높이 */
     background: white;
     border-right: 1px solid #e5e7eb;
     padding: 20px;
+    box-sizing: border-box;
 }
 
+/* ===== 메인 영역 ===== */
 main {
-    flex: 1;
+    width: 996px;
+    margin: 0 auto;
     padding: 24px;
     background: var(--background);
 }
 
+/* ===== 유저 정보 ===== */
 .user-info img {
-    width: 48px;
+    width: 48px; /* 이미지 크기 */
     height: 48px;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* 아래 여백 */
 }
 
 .user-info p {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 14px; /* 글자 크기 */
+    line-height: 1.4; /* 줄간격 */
 }
 
+/* ===== 메뉴 ===== */
 .menu ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* 불릿 제거 */
+    padding: 0; /* 안쪽 여백 제거 */
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 10px; /* 항목 간 간격 */
 }
 
 .menu li {
-    cursor: pointer;
-    font-size: 15px;
-    padding: 6px 4px;
-    border-radius: 8px;
-    transition: 0.2s;
-    font-weight: 500;
+    cursor: pointer; /* 마우스 올리면 손 모양 */
+    font-size: 15px; /* 글자 크기 */
+    padding: 6px 4px; /* 여백 */
+    border-radius: 8px; /* 둥근 모서리 */
+    transition: 0.2s; /* hover 부드럽게 */
+    font-weight: 500; /* 중간 굵기 */
 }
 
 .menu li:hover {
-    background: #f0f4f8;
-    color: var(--primary);
+    background: #f0f4f8; /* 연한 파랑 배경 */
+    color: var(--primary); /* 파란 글씨 */
 }
 
+/* ===== 박스 공통 ===== */
 .summary-box, .rm-box {
-    background: white;
-    border-radius: var(--border-radius);
+    width: 588px;
+    height: 166px;
+    margin-left: 200px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    border: 1.5px solid #2A94D6;    /* 테두리 색 + 굵기 */
+    border-radius: 10px;            /* 모서리 반경 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* 바깥 그림자 */
+    background: white;
 }
 
+.rm-box {
+    margin-top: 24px;
+    position: relative; /* 겹치지 않게 */
+}
+
+/* ===== 박스 제목 ===== */
 .summary-box h2, .rm-box h3 {
-    font-size: 16px;
-    margin-bottom: 6px;
+    font-size: 16px; /* 제목 크기 */
+    margin-bottom: 6px; /* 아래 여백 */
+    text-align: center;
 }
 
-.stats, .rm-stats {
-    display: flex;
-    justify-content: space-around;
+/* ===== 박스 글씨 ===== */
+.summary-box p, .rm-box p {
+    font-size: 12px;
+    font-weight: 400;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+/* ===== 통계 정렬 ===== */
+.stats, .rm-stats {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-around; /* 균등 정렬 */
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 30px; /* 위 여백 */
 }
 
 .stats div, .rm-stats div {
-    font-size: 13px;
-    color: var(--gray);
+    font-size: 13px; /* 라벨 글자 크기 */
+    color: var(--gray); /* 회색 */
+    margin-right: 15px;
 }
 
 .stats strong, .rm-stats strong {
-    display: block;
-    font-size: 16px;
-    color: #1f1f1f;
+    display: block; /* 줄바꿈 */
+    font-size: 16px; /* 숫자 강조 */
+    color: #1f1f1f; /* 진한 회색 */
 }
 
+/* ===== 입력 영역 ===== */
 .workout-input {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }
 
 .workout-input h3 {
-    font-size: 15px;
+    font-size: 15px; /* 소제목 */
     margin-bottom: 4px;
 }
 
 .workout-input p {
-    font-size: 13px;
+    font-size: 13px; /* 설명 텍스트 */
     color: var(--gray);
     margin-bottom: 10px;
 }
 
+/* ===== 폼 입력 영역 ===== */
 .set-form {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    width: 840px;
+    height: 56px;
+    display: flex; /* 가로 배치 */
+    gap: 10px; /* 요소 간 간격 */
+    align-items: center; /* 수직 정렬 */
 }
 
-.set-form select, .set-form input {
+.set-form select {
+    width: 121px;
+    height: 34px;
     padding: 6px 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 15px;
+}
+  
+.set-form input {
+    width: 156px;
+    height: 34px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.set-form .multiply {
+    font-size: 14px;
+    color: #333;
+    margin: 0 6px;
 }
 
 .set-form button {
-    background: var(--primary);
-    color: white;
+    background: var(--primary); /* 파란 배경 */
+    color: white; /* 흰색 글씨 */
     padding: 6px 12px;
     border: none;
     border-radius: 6px;
+    cursor: pointer; /* 마우스 손모양 */
+}
+
+.set-list {
+    display: flex;           /* 플렉스 컨테이너 설정 */
+    flex-direction: column;  /* 세로로 아이템 정렬 */
+    gap: 12px;               /* 아이템 간 간격 (대신 margin-bottom 써도 무방) */
+}
+  
+.set-item {
+    width: 840px; /* 전체 가로 너비 설정 */
+    height: 56px; /* 전체 세로 높이 설정 */
+  
+    display: flex; /* 내부 요소들을 가로로 나열 */
+    align-items: center; /* 세로 방향으로 중앙 정렬 */
+    justify-content: space-between; /* 좌우 요소 간 공간을 균등하게 분배 */
+  
+    padding: 0 16px; /* 좌우 여백 16px */
+    border: 1px solid #e0e0e0; /* 얇은 회색 테두리 */
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+  
+    background: #fff; /* 흰색 배경 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 은은한 그림자 효과 */
+    margin-bottom: 12px; /* 아이템 간 아래 간격 */
+}
+
+.set-item span {
+    margin-right: 10px;
+}
+  
+.set-item .multiply {
+    margin: 0 8px;
+}
+  
+.set-item .remove-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
     cursor: pointer;
 }
 
+/* ===== 푸터 ===== */
 footer {
-    text-align: center;
-    font-size: 12px;
-    color: var(--gray);
-    padding: 12px;
-    border-top: 1px solid #e5e7eb;
-    margin-top: 40px;
+    text-align: center; /* 가운데 정렬 */
+    font-size: 12px; /* 작은 글씨 */
+    color: var(--gray); /* 회색 */
+    padding: 12px; /* 여백 */
+    border-top: 1px solid #e5e7eb; /* 윗 테두리 */
+    margin-top: 40px; /* 위와 간격 */
 }

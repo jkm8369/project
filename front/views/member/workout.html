@@ -15,6 +15,7 @@
     </header>
 
     <div id="content">
+
         <aside>
             <div class="user-info">
             <img src="../../assets/images/사이트로고.jpg" alt="icon">
@@ -35,6 +36,12 @@
         </aside>
 
       <main id="main">
+
+        <div class="page-header">
+            <h1 class="page-title">Workout Log</h1>
+            <p class="page-subtitle">2025년 7월 20일</p>
+        </div>
+
         <section class="summary-box">
           <h2>총 세트 수행</h2>
           <p>0개 운동 등록 수행</p>
@@ -46,19 +53,48 @@
         </section>
 
         <section class="workout-input">
-          <h3>오늘의 운동</h3>
-          <p>수행한 운동과 세트별 무게, 횟수를 확인하세요</p>
-          <form class="set-form">
-            <select><option>부위</option></select>
-            <select><option>운동</option></select>
-            <input type="text" placeholder="무게" />kg
-            <input type="text" placeholder="횟수" />회
-            <button type="submit">+</button>
-          </form>
+            <h3>오늘의 운동</h3>
+            <p>수행한 운동과 세트별 무게, 횟수를 확인하세요</p>
+            <form class="set-form">
+                <select><option>부위</option></select>
+                <select><option>운동</option></select>
+                <input type="text" placeholder="무게" />kg
+                <span class="multiply">×</span>
+                <input type="text" placeholder="횟수" />회
+                <button type="submit">+</button>
+            </form>
+
+            <div class="set-list">
+                <div class="set-item">
+                    <span class="part">가슴</span>
+                    <span class="workout">운동</span>
+                    <span class="label">무게</span>
+                    <span class="weight">100</span>
+                    <span class="unit">kg</span>
+                    <span class="multiply">×</span>
+                    <span class="count">1</span>
+                    <span class="unit">회</span>
+                    <button class="remove-btn">–</button>
+                </div>
+
+                <div class="set-item">
+                    <span class="part">어깨</span>
+                    <span class="workout">운동</span>
+                    <span class="label">무게</span>
+                    <span class="weight">100</span>
+                    <span class="unit">kg</span>
+                    <span class="multiply">×</span>
+                    <span class="count">1</span>
+                    <span class="unit">회</span>
+                    <button class="remove-btn">–</button>
+                </div>
+            </div>
+
         </section>
 
         <section class="rm-box">
           <h3>1RM</h3>
+          <p><540></p>
           <div class="rm-stats">
             <div>벤치프레스<br /><strong>120</strong></div>
             <div>데드리프트<br /><strong>220</strong></div>
@@ -71,8 +107,9 @@
           <form class="set-form">
             <select><option>부위</option></select>
             <select><option>운동</option></select>
-            <input type="text" placeholder="무게" />kg
-            <input type="text" placeholder="횟수" />회
+            <input type="text" placeholder="무게" >kg
+            <span class="multiply">×</span>
+            <input type="text" placeholder="횟수" >회
             <button type="submit">+</button>
           </form>
         </section>
