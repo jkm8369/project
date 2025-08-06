@@ -67,6 +67,15 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 
+/* --- 기본 스타일 초기화 --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background-color: #f0f2f5;
+}
+
+
 input, select, textarea{
     font-family: inherit;
     font-size: inherit;

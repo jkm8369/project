@@ -1,97 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workout Log - FitLink</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="workout.css" />
-  </head>
-  <body>
-    <div class="wrap">
-      <main class="content">
-        <header class="page-header">
-          <h1>Workout Log</h1>
-          <p>2025년 7월 20일</p>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Log - FitLink</title>
+  <link rel="stylesheet" href="./front/assets/css/reset.css" />
+  <link rel="stylesheet" href="workout.css" />
+</head>
+<body>
+  <div id="wrap">
+    <header>
 
-        <!-- 총 세트 수행 -->
+      <!-- 왼쪽: 이미지 로고 (변경됨) -->
+      <a href="" class="btn-logout">
+          <!-- 여기에 실제 로고 이미지 파일을 연결하세요 -->
+          <img src="./front/assets/images/logo.jpg" alt="FitLnk Logo">
+      </a>
+
+      <!-- 오른쪽: 사용자 메뉴 -->
+      <div class="btn-logout">
+          <a href="#" class="logout-link">
+              로그아웃
+          </a>
+      </div>
+
+    </header>
+
+    <div id="content">
+      <aside>
+        <div class="user-info">
+          <img src="profile.png" alt="회원아이콘" />
+          <p>홍길동<br /><small>회원 | Trainer</small></p>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li>운동일지</li>
+            <li>InBody & Meal</li>
+            <li>사진</li>
+            <li>예약현황</li>
+            <li>운동종류</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
         <section class="summary-box">
-          <div class="summary-title">총 세트 수행</div>
-          <p class="summary-subtitle">0개 운동 등록 수행</p>
-          <div class="summary-stats">
-            <div>
-              <p>최고 중량</p>
-              <strong>0</strong>
-            </div>
-            <div>
-              <p>총 반복수</p>
-              <strong>0</strong>
-            </div>
-            <div>
-              <p>총 볼륨</p>
-              <strong>0</strong>
-            </div>
+          <h2>총 세트 수행</h2>
+          <p>0개 운동 등록 수행</p>
+          <div class="stats">
+            <div>최고 중량<br /><strong>0</strong></div>
+            <div>총 반복수<br /><strong>0</strong></div>
+            <div>총 볼륨<br /><strong>0</strong></div>
           </div>
         </section>
 
-        <!-- 오늘의 운동 입력 -->
-        <section class="input-box">
-          <h2>오늘의 운동</h2>
-          <p>수행한 운동과 세트별 무게, 횟수를 확인하세요</p>
-          <div class="input-form">
+        <section class="workout-input">
+          <h3>오늘의 운동</h3>
+          <form class="set-form">
             <select><option>부위</option></select>
             <select><option>운동</option></select>
-            <input type="text" placeholder="무게" />
-            <span>kg</span>
-            <span class="multiply">×</span>
-            <input type="text" placeholder="횟수" />
-            <span>회</span>
-            <button>＋</button>
-          </div>
+            <input type="number" placeholder="무게" />kg
+            <input type="number" placeholder="횟수" />회
+            <button type="submit">+</button>
+          </form>
 
-          <!-- 운동 리스트 예시 -->
-          <div class="set-item">가슴 운동 무게 100 kg × 1 회<button>－</button></div>
-          <div class="set-item">어깨 운동 무게 100 kg × 1 회<button>－</button></div>
+          <section class="set-list">
+          <!-- 여기에 js로 추가될 항목이 들어감 -->
+          </section>
+
         </section>
 
-        <!-- 1RM 박스 -->
         <section class="rm-box">
-          <div class="rm-title">1RM</div>
-          <p class="rm-score">&lt;540&gt;</p>
+          <h3>1RM</h3>
+
           <div class="rm-stats">
-            <div>
-              <p>벤치프레스</p>
-              <strong>120</strong>
-            </div>
-            <div>
-              <p>데드리프트</p>
-              <strong>220</strong>
-            </div>
-            <div>
-              <p>스쿼트</p>
-              <strong>200</strong>
-            </div>
+            <div>벤치프레스<br /><strong>120</strong></div>
+            <div>데드리프트<br /><strong>220</strong></div>
+            <div>스쿼트<br /><strong>200</strong></div>
           </div>
         </section>
 
-        <!-- 1RM 입력 -->
-        <section class="input-box">
-          <h2>1RM 무게</h2>
-          <div class="input-form">
+
+        <section class="rm-weight">
+          <h3>1RM 무게</h3>
+
+          <form class="set-form">
             <select><option>부위</option></select>
             <select><option>운동</option></select>
-            <input type="text" placeholder="무게" />
-            <span>kg</span>
-            <span class="multiply">×</span>
-            <input type="text" placeholder="횟수" />
-            <span>회</span>
-            <button>＋</button>
-          </div>
-        </section>
+            <input type="number" placeholder="무게" />kg
+            <input type="number" placeholder="횟수" />회
+            <button type="submit">+</button>
+          </form>
 
-        <footer class="footer">Copyright © 2025. FitLink All rights reserved.</footer>
+          <section class="set-list">
+          <!-- 여기에 js로 추가될 항목이 들어감 -->
+          </section>
+
+        </section>
       </main>
     </div>
-  </body>
+
+    <footer>
+      Copyright © 2025. FitLink All rights reserved.
+    </footer>
+  </div>
+</body>
 </html>
