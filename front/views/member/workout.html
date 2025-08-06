@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Log - FitLink</title>
+  <link rel="stylesheet" href="../../assets/css/workout.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="logo">Fit<span>Link</span></div>
+      <button class="logout">로그아웃</button>
+    </header>
+
+    <div id="content">
+        <aside>
+            <div class="user-info">
+            <img src="../../assets/images/사이트로고.jpg" alt="icon">
+            <p>홍길동<br /><small>회원 | Trainer</small></p>
+            </div>
+
+            <nav class="menu">
+            <ul>
+                <li>
+                    <img src="">운동일지
+                </li>
+                <li>InBody & Meal</li>
+                <li>사진</li>
+                <li>예약현황</li>
+                <li>운동종류</li>
+            </ul>
+            </nav>
+        </aside>
+
+      <main id="main">
+        <section class="summary-box">
+          <h2>총 세트 수행</h2>
+          <p>0개 운동 등록 수행</p>
+          <div class="stats">
+            <div>최고 중량<br /><strong>0</strong></div>
+            <div>총 반복수<br /><strong>0</strong></div>
+            <div>총 볼륨<br /><strong>0</strong></div>
+          </div>
+        </section>
+
+        <section class="workout-input">
+          <h3>오늘의 운동</h3>
+          <p>수행한 운동과 세트별 무게, 횟수를 확인하세요</p>
+          <form class="set-form">
+            <select><option>부위</option></select>
+            <select><option>운동</option></select>
+            <input type="text" placeholder="무게" />kg
+            <input type="text" placeholder="횟수" />회
+            <button type="submit">+</button>
+          </form>
+        </section>
+
+        <section class="rm-box">
+          <h3>1RM</h3>
+          <div class="rm-stats">
+            <div>벤치프레스<br /><strong>120</strong></div>
+            <div>데드리프트<br /><strong>220</strong></div>
+            <div>스쿼트<br /><strong>200</strong></div>
+          </div>
+        </section>
+
+        <section class="workout-input">
+          <h3>1RM 무게</h3>
+          <form class="set-form">
+            <select><option>부위</option></select>
+            <select><option>운동</option></select>
+            <input type="text" placeholder="무게" />kg
+            <input type="text" placeholder="횟수" />회
+            <button type="submit">+</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      Copyright © 2025. FitLink All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
+
