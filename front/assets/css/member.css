@@ -42,7 +42,7 @@ header {
 }
 
 /* --- 로고 스타일 (수정된 부분) --- */
-.btn-logout img {
+header .btn-logout img {
     /* === 요청사항 1: 로고 크기 키우기 === */
     /* 로고 이미지의 높이를 원하는 크기로 직접 지정합니다. */
     height: 40px;
@@ -53,7 +53,7 @@ header {
 }
 
 /* --- 로그아웃 버튼 스타일 --- */
-.btn-logout .logout-link {
+header .btn-logout .logout-link {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -67,7 +67,7 @@ header {
     transition: background-color 0.2s;
 }
 
-.user-menu .logout-link:hover {
+header .btn-logout .logout-link:hover {
     background-color: #f3f4f6;
 }
 
