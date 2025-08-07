@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workout Log - FitLink</title>
-  <link rel="stylesheet" href="./front/assets/css/reset.css" />
+  <link rel="stylesheet" href="./front/assets/css/reset.css">
   <link rel="stylesheet" href="workout.css" />
 </head>
 <body>
   <div id="wrap">
-    <header>
 
+    <!-- ------헤더------ -->
+    <header>
       <!-- 왼쪽: 이미지 로고 (변경됨) -->
       <a href="" class="btn-logout">
           <!-- 여기에 실제 로고 이미지 파일을 연결하세요 -->
@@ -23,16 +24,16 @@
               로그아웃
           </a>
       </div>
-
     </header>
 
+    <!-- --aside + main-- -->
     <div id="content">
       <aside>
         <div class="user-info">
           <img src="profile.png" alt="회원아이콘" />
           <p>홍길동<br /><small>회원 | Trainer</small></p>
         </div>
-        <nav class="menu">
+        <div class="menu">
           <ul>
             <li>운동일지</li>
             <li>InBody & Meal</li>
@@ -40,7 +41,7 @@
             <li>예약현황</li>
             <li>운동종류</li>
           </ul>
-        </nav>
+        </div>
       </aside>
 
       <main>
