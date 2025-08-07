@@ -180,7 +180,7 @@ main {
 /* ////=================Content --> aside + main=====================*/
 
 /* ================== footer =========================== */
-footer {
+footer p{
     text-align: center;
     font-size: 12px;
     color: var(--gray);
