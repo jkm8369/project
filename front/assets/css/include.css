@@ -114,7 +114,10 @@ aside {
     color: #333;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2px;
+}
 
+.trainer-info span {
+    cursor: pointer;
 }
 
 .check-icon {
@@ -146,7 +149,7 @@ aside {
     display: block;
 }
 
-.aside-menu ul li:hover {
+.aside-menu ul li:hover, .trainer-info span:hover {
     background-color: #f0f4f8;
     color: var(--primary);
 }
