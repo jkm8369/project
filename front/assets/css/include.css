@@ -98,6 +98,7 @@ aside {
     border-radius: 6px;
     transition: 0.2s;
     cursor: pointer;
+    list-style: none;
 }
 
 .menu ul li:hover {
