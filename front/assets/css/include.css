@@ -135,7 +135,7 @@ footer {
     color: var(--gray);
     padding: 16px 0;
     border-top: 1px solid #e5e7eb;
-    margin-top: auto;
+    margin-top: 2px;
 }
 
 /* ///================== footer =========================== */

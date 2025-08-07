@@ -32,7 +32,7 @@
   padding: 5px 20px 5px 30px;
   box-sizing: border-box;
   /* 패딩과 테두리가 너비에 영향을 주지 않도록 설정 */
-  margin-bottom: auto;
+  margin-bottom: 20px;
 }
 
 .list-title {
