@@ -81,6 +81,7 @@ aside {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    margin-right: 60px;
 }
 
 .user-name-wrap {
@@ -115,7 +116,7 @@ aside {
     padding-bottom: 2px;
 
 }
- 
+
 .check-icon {
     width: 24px;
     height: 24px;
@@ -123,13 +124,26 @@ aside {
     margin-right: 4px;
 }
 
-.aside-menu ul li {
-    font-size: 15px;
-    padding: 8px;
-    border-radius: 6px;
-    transition: 0.2s;
-    cursor: pointer;
+.aside-menu ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aside-menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* 아이콘과 텍스트 간격 */
+    padding: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aside-menu ul li img {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .aside-menu ul li:hover {
