@@ -1,7 +1,7 @@
 /* -----------------------------공통--------------------------- */
 /* -----------------------제목*/
 /* 페이지 헤더 컨테이너 */
-.page-header {
+.main-header {
   text-align: center;
   /* 내부 텍스트들을 중앙 정렬 */
   margin-bottom: 40px;
@@ -9,7 +9,7 @@
 }
 
 /* 제목 스타일 */
-.page-title {
+.main-title {
   font-size: 42px;
   font-weight: 600;
   /* Semi-bold */
@@ -20,7 +20,7 @@
 }
 
 /* 날짜 스타일 */
-.page-subtitle {
+.main-subtitle {
   font-size: 18px;
   color: #8a9aaa;
   /* 제목보다 옅은 회색빛 파란색 */

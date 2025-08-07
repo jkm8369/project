@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workout Log - FitLink</title>
   <link rel="stylesheet" href="./front/assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/include.css" />
   <link rel="stylesheet" href="../../assets/css/member.css" />
 </head>
+
 <body>
   <div id="wrap">
 
@@ -14,28 +17,40 @@
     <header>
       <!-- 왼쪽: 이미지 로고 (변경됨) -->
       <a href="" class="btn-logout">
-          <!-- 여기에 실제 로고 이미지 파일을 연결하세요 -->
-          <img src="../../assets/images/logo.jpg" alt="FitLnk Logo">
+        <!-- 여기에 실제 로고 이미지 파일을 연결하세요 -->
+        <img src="../../assets/images/logo.jpg" alt="FitLnk Logo">
       </a>
 
       <!-- 오른쪽: 사용자 메뉴 -->
       <div class="btn-logout">
-          <a href="#" class="logout-link">
-              로그아웃
-          </a>
+        <a href="#" class="logout-link">
+          로그아웃
+        </a>
       </div>
     </header>
 
     <!-- --aside + main-- -->
     <div id="content">
+
       <aside>
         <div class="user-info">
-          <img src="profile.png" alt="회원아이콘" />
-          <p>홍길동<br /><small>회원 | Trainer</small></p>
+          <div class="user-name-wrap">
+            <img class="dumbell-icon" src="../../assets/images/사이트로고.jpg" alt="dumbell-icon">
+            <p class="user-name">
+              홍길동<br /><small>(회원)</small>
+            </p>
+          </div>
+          <div class="trainer-info">
+            <img class="check-icon" src="../../assets/images/member/check square.jpg" alt="check">
+            <span>1 Trainer</span>
+          </div>
         </div>
-        <div class="menu">
+
+        <div class="aside-menu">
           <ul>
-            <li>운동일지</li>
+            <li>
+              <img>운동일지
+            </li>
             <li>InBody & Meal</li>
             <li>사진</li>
             <li>예약현황</li>
@@ -45,59 +60,133 @@
       </aside>
 
       <main>
-        <section class="summary-box">
-          <h2>총 세트 수행</h2>
-          <p>0개 운동 등록 수행</p>
-          <div class="stats">
-            <div>최고 중량<br /><strong>0</strong></div>
-            <div>총 반복수<br /><strong>0</strong></div>
-            <div>총 볼륨<br /><strong>0</strong></div>
-          </div>
-        </section>
 
-        <section class="workout-input">
-          <h3>오늘의 운동</h3>
-          <form class="set-form">
-            <select><option>부위</option></select>
-            <select><option>운동</option></select>
-            <input type="number" placeholder="무게" />kg
-            <input type="number" placeholder="횟수" />회
-            <button type="submit">+</button>
-          </form>
+        <div class="main-header">
+          <p class="main-title">Workout Log</p>
+          <p class="main-subtitle">2025년 8월 7일</p>
+        </div>
 
-          <section class="set-list">
-          <!-- 여기에 js로 추가될 항목이 들어감 -->
+        <div class="box2">
+          <section class="summary-box">
+            <h2>총 세트 수행</h2>
+            <p>0개 운동 등록 수행</p>
+            <div class="stats">
+              <div>최고 중량<br /><strong>0</strong></div>
+              <div>총 반복수<br /><strong>0</strong></div>
+              <div>총 볼륨<br /><strong>0</strong></div>
+            </div>
           </section>
 
-        </section>
+          <section class="workout-input">
+            <h3>오늘의 운동</h3>
+            <!-- -- 운동 입력 폼 -- -->
+            <form class="set-form">
+              <select>
+                <option>부위</option>
+              </select>
+              <select>
+                <option>운동</option>
+              </select>
+              <input type="text" placeholder="무게" />kg
+              <input type="text" placeholder="횟수" />회
+              <button type="submit">+</button>
+            </form>
 
-        <section class="rm-box">
-          <h3>1RM</h3>
+            <!-- -- + 클릭시 추가되는 폼 (js)-- -->
+            <div class="set-list">
+              <div class="set-item">
+                <span>가슴</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
+              <div class="set-item">
+                <span>어깨</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
+              <div class="set-item">
+                <span>복근</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
 
-          <div class="rm-stats">
-            <div>벤치프레스<br /><strong>120</strong></div>
-            <div>데드리프트<br /><strong>220</strong></div>
-            <div>스쿼트<br /><strong>200</strong></div>
-          </div>
-        </section>
+          </section>
+        </div>
 
-
-        <section class="rm-weight">
-          <h3>1RM 무게</h3>
-
-          <form class="set-form">
-            <select><option>부위</option></select>
-            <select><option>운동</option></select>
-            <input type="number" placeholder="무게" />kg
-            <input type="number" placeholder="횟수" />회
-            <button type="submit">+</button>
-          </form>
-
-          <section class="set-list">
-          <!-- 여기에 js로 추가될 항목이 들어감 -->
+        <div class="box3">
+          <section class="rm-box">
+            <h3>1RM</h3>
+            <div class="rm-stats">
+              <div>벤치프레스<br /><strong>120</strong></div>
+              <div>데드리프트<br /><strong>220</strong></div>
+              <div>스쿼트<br /><strong>200</strong></div>
+            </div>
           </section>
 
-        </section>
+
+          <section class="rm-weight">
+            <h3>1RM 무게</h3>
+            <form class="set-form">
+              <select>
+                <option>부위</option>
+              </select>
+              <select>
+                <option>운동</option>
+              </select>
+              <input type="text" placeholder="무게">kg
+              <input type="text" placeholder="횟수">회
+            </form>
+
+            <!-- -- + 클릭시 추가되는 폼 (js)-- -->
+            <div class="set-list">
+              <div class="set-item">
+                <span>가슴</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
+              <div class="set-item">
+                <span>어깨</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
+              <div class="set-item">
+                <span>복근</span>
+                <span>운동</span>
+                <span>100</span>
+                <span>kg</span>
+                <span>✕</span>
+                <span>1</span>
+                <span>회</span>
+                <button class="remove-btn">—</button>
+              </div>
+
+          </section>
+        </div>
       </main>
     </div>
 
@@ -106,4 +195,5 @@
     </footer>
   </div>
 </body>
+
 </html>
