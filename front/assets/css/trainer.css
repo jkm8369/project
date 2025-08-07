@@ -1,7 +1,7 @@
 /* -----------------------------공통--------------------------- */
 /* -----------------------제목*/
 /* 페이지 헤더 컨테이너 */
-.main-header {
+.page-header {
   text-align: center;
   /* 내부 텍스트들을 중앙 정렬 */
   margin-bottom: 40px;
@@ -9,7 +9,7 @@
 }
 
 /* 제목 스타일 */
-.main-title {
+.page-title {
   font-size: 42px;
   font-weight: 600;
   /* Semi-bold */
@@ -20,7 +20,7 @@
 }
 
 /* 날짜 스타일 */
-.main-subtitle {
+.page-subtitle {
   font-size: 18px;
   color: #8a9aaa;
   /* 제목보다 옅은 회색빛 파란색 */
@@ -106,6 +106,15 @@
   margin: 30px 0;
 }
 /* //----------------------- 구분선 */
+
+/* 카테고리 제목 (가슴, 등, 어깨) */
+.category-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
 /* //-----------------------------공통--------------------------- */
 
 /* -----------------------------main--------------------------- */
@@ -199,16 +208,11 @@
 }
 /* //-----------------------2. 회원/비회원 리스트*/
 
-/*************************member*************************/
+/* //-----------------------------member--------------------------- */
 
-/*************************exercise*************************/
-/* 운동 항목들을 담는 그리드 컨테이너 (ul 태그용 스타일) */
-/* --- 이 아래로 운동 종류 리스트 스타일 추가 --- */
-
+/* -----------------------------exercise--------------------------- */
 /* 운동 종류 리스트 전체 컨테이너 */
-.exercise-list-container {
-  margin-top: 50px;
-  /* 위쪽 회원 리스트와의 간격 */
+.exercise-container {
   background-color: #fdfdff;
   /* 살짝 푸른빛이 도는 흰색 */
   border: 2px solid #aedcff;
@@ -218,7 +222,7 @@
 }
 
 /* 운동종류 수정 버튼이 있는 헤더 */
-.exercise-list-header {
+.exercise-header {
   display: flex;
   justify-content: flex-end;
   /* 버튼을 오른쪽으로 정렬 */
@@ -261,14 +265,6 @@
   /* 구분선과의 간격 */
 }
 
-/* 카테고리 제목 (가슴, 등, 어깨) */
-.category-title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 30px 0;
-}
-
 /* 운동 항목들을 담는 그리드 컨테이너 */
 .exercise-grid {
   /* ul 태그의 기본 스타일 초기화 */
@@ -276,7 +272,7 @@
   /* 목록 앞의 점 제거 */
   padding: 0;
   /* 왼쪽 기본 여백 제거 */
-  margin: 0;
+  margin: 0 0 50px 0;
   /* 기본 마진 제거 */
 
   /* 기존 Grid 스타일 유지 */
@@ -292,3 +288,126 @@
 }
 
 /*************************exercise*************************/
+/*************************exercise-list*************************/
+/* --- 2. 운동종류 탭 메뉴 --- */
+.category-tabs {
+  width: 918px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+.tab {
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 3px solid transparent;
+}
+
+/* --- 3. 버튼 --- */
+.category-buttons {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  gap: 10px;
+}
+.category-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: #fff;
+  color: var(--text-secondary);
+  border-color: #ced4da;
+}
+
+/* --- 5. 내가 선택한 리스트 --- */
+.select-box {
+  width: 918px;
+  justify-content: space-around;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* 제목을 중앙 정렬합니다. */
+.select-box p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+}
+
+/* 운동 목록 그리드 (기존 스타일) */
+.category-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 20px;
+  color: #495057;
+}
+
+.category-grid li {
+  text-align: center;
+  font-size: 15px;
+}
+
+/* --- 6. 전체 운동 리스트 (커스텀 체크박스) --- */
+.list-box {
+  margin: 20px 0 0 40px;
+}
+.checkbox-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.checkbox-item label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+  font-size: 16px;
+}
+.checkbox-item input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-item .custom-checkbox {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #adb5bd;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+}
+/* 'checked' 속성이 있는 input 다음에 오는 span에만 스타일 적용 */
+.checkbox-item input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.checkbox-item input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+/*************************exercise-list*************************/
