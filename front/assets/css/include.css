@@ -1,3 +1,19 @@
+/* ===================전체 틀============================ */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+/* ///===================전체 틀============================ */
+
 /* ======================= header ================ */
 header {
     display: flex;
