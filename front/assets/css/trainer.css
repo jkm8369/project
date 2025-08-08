@@ -34,7 +34,7 @@
   width: 910px;
   /* --- 테두리 관련 스타일 추가 --- */
   background-color: #ffffff;
-  border: 1px solid #ababab;
+  border: 2px solid #ababab;
   /* 옅은 회색 테두리 */
   border-radius: 12px;
   /* 모서리를 부드럽게 (12px) */
@@ -223,7 +223,7 @@
 .exercise-container {
   background-color: #fdfdff;
   /* 살짝 푸른빛이 도는 흰색 */
-  border: 2px solid #aedcff;
+  border: 2px solid #b9b9b9;
   /* 밝은 파란색 테두리 */
   border-radius: 10px;
   padding: 30px 40px;
@@ -303,7 +303,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #fff;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 10px 5px;
   margin-bottom: 20px;
@@ -381,10 +381,17 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+
+.checkbox-item{
+  background-color: #fff;
+  border: #b9b9b9 solid 1px;
+  border-radius: 8px;
+}
+
 .checkbox-item label {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px 10px;
   gap: 10px;
   font-size: 16px;
 }
