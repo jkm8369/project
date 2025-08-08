@@ -145,7 +145,6 @@
   align-items: center;
   gap: 15px;
   height: 100%; /* td 높이에 맞춤 */
-  padding: 8px 0;
 }
 
 .icon-btn {
