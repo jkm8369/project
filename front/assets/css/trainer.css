@@ -53,8 +53,10 @@
 
 .member-table {
   width: 100%;
-  border-collapse: collapse;
-  /* 테이블 선을 한 줄로 합침 */
+  border-collapse: separate;
+  /* 테이블 셀 간의 경계가 겹치지 않도록 설정 */
+  border-spacing: 0 10px;
+  /* 셀 간의 수직 간격을 10px로 설정 */
   text-align: center;
   /* 기본 텍스트 정렬을 중앙으로 */
 }
@@ -71,13 +73,14 @@
 
 /* 테이블 헤더(제목) 스타일 */
 .member-table th {
+  padding: 5px 10px;
+  font-size: 16px;
+  vertical-align: middle;
   font-weight: bold;
   color: #222;
-}
-
-/* 테이블 데이터(내용) 스타일 */
-.member-table td {
-  color: #555;
+  border: none;
+  /* 제목(th)의 텍스트가 길어도 줄바꿈되지 않도록 설정합니다. */
+  white-space: nowrap;
 }
 
 /* 이름에만 적용된 링크 스타일 */
@@ -86,25 +89,70 @@
   /* 밑줄 표시 */
 }
 
-/* 테이블의 마지막 셀(잔여일수+버튼) 레이아웃 조정 */
-.member-table tbody div {
-  border: #000 solid 1px transparent;
-  display: flex;
-  justify-content: center;
-  /* 가로 중앙 정렬 */
-  align-items: center;
-  /* 세로 중앙 정렬 */
+.member-table thead th:last-child {
+  width: 100px;
+}
+
+/* tbody의 각 셀(td)에 테두리를 적용하여 카드 모양을 만듭니다. */
+.member-table tbody td {
+  color: #555;
+  border: 1px solid #b9b9b9;
+  border-right: none;
+  border-left: none;
+  font-size: 16px; /* th와 일관성을 위해 폰트 사이즈 추가 */
+  vertical-align: middle; /* th와 일관성을 위해 수직 정렬 추가 */
+}
+
+/* 각 행의 첫 번째와 마지막 셀에 둥근 모서리를 적용합니다. */
+.member-table tbody td:first-child {
+  border-left: 1px solid #b9b9b9;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .member-table tbody td:last-child {
+  border-right: 1px solid #b9b9b9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* 첫번째와 마지막이 아닌 중간 셀들의 세로선을 제거합니다. */
+.member-table tbody td:not(:first-child):not(:last-child) {
+  border-right: none;
+  border-left: none;
+}
+
+/* 아이콘 버튼 기본 스타일 */
+.action-buttons {
   display: flex;
   justify-content: center;
-  /* 가로 중앙 정렬 */
   align-items: center;
-  /* 세로 중앙 정렬 */
   gap: 15px;
-  /* '00회' 텍스트와 '취소' 버튼 사이의 간격 */
-  /* //-----------------------리스트*/
+  height: 100%; /* td 높이에 맞춤 */
+  padding: 8px 0;
+}
+
+.icon-btn {
+  background-color: #6c757d; /* 배경색을 투명하게 */
+  color: #6c757d; /* 기본 아이콘 색상 */
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+/* 기존 td:last-child 스타일에서 flex 관련 속성 조정 */
+/* 이 부분은 이미 코드가 있다면 그대로 두거나, 아래처럼 gap만 남겨도 됩니다. */
+.member-table tbody td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: none; /* 셀 사이의 중복되는 세로선을 제거 */
+
+  /* [수정/확인] 버튼들을 가로로 정렬하고 간격을 주기 위해 flex를 사용할 수 있습니다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* 아이콘 버튼 사이의 간격 */
 }
 
 /* ----------------------- 구분선 */
