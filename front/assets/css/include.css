@@ -154,6 +154,30 @@ aside {
     color: var(--primary);
 }
 
+/* [추가] */
+.menu-item {
+  display: block; /* 링크를 한 줄씩 차지하도록 설정 */
+  margin-bottom: 15px; /* 메뉴 아이템 간의 간격 */
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* 아이콘에 대한 스타일 */
+.menu-item i {
+  /* 1. 아이콘을 담을 공간의 너비를 고정합니다. */
+  /* 가장 넓은 아이콘보다 약간 더 넓게 잡는 것이 좋습니다. */
+  width: 30px; 
+
+  /* 2. 고정된 공간 안에서 아이콘이 가운데 오도록 설정합니다. */
+  text-align: center;
+
+  /* 3. 아이콘과 글씨 사이에 간격을 줍니다. */
+  margin-right: 10px;
+
+  /* 4. width 속성을 적용하기 위해 display 속성을 변경합니다. */
+  display: inline-block;
+}
 /* //=========================aside =============================*/
 
 
