@@ -87,6 +87,15 @@
 }
 
 /* 테이블의 마지막 셀(잔여일수+버튼) 레이아웃 조정 */
+.member-table tbody div {
+  border: #000 solid 1px transparent;
+  display: flex;
+  justify-content: center;
+  /* 가로 중앙 정렬 */
+  align-items: center;
+  /* 세로 중앙 정렬 */
+}
+
 .member-table tbody td:last-child {
   display: flex;
   justify-content: center;
