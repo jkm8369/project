@@ -974,6 +974,21 @@
 .m-label {
     color: #64748b;
     font-size: 13px;
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+.m-label .m-label-sub {
+    display: block;
+    /* 줄바꿈 */
+    margin-top: 2px;
+    /* 제목과 간격 */
+    font-size: 12px;
+    /* 작게 */
+    color: #94a3b8;
+    /* 흐린 회색 */
+    font-weight: 400;
+    /* 진하지 않게 */
 }
 
 .m-value {
