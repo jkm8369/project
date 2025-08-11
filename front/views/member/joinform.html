@@ -1,91 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
   <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8">
-    <title>FitLink 회원가입</title>
-    <link rel="stylesheet" href="../../assets/css/form.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>회원가입</title>
   </head>
+
   <body>
-    <div id="wrap">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="frame">
-            <div class="overlap-group">
-                <img class="element" src="../../assets/images/logo.jpg" />
-                <div class="group">
-                    <div class="div">
-                    <div class="frame-wrapper">
-                        <div class="frame-2">
-                        <img class="user" src="../../assets/images/joinform/User.jpg">
-                        <div class="text-wrapper">아이디</div>
-                        </div>
-                    </div>
-                    <div class="div-wrapper">
-                        <div class="frame-3">
-                        <img class="lock-alt-light" src="../../assets/images/joinform/Lock_alt_light.jpg" />
-                        <div class="text-wrapper-2">비밀번호</div>
-                        </div>
-                    </div>
-                    <div class="view"></div>
-                    </div>
-                </div>
-              <div class="group-2">
-                <div class="frame-wrapper">
-                  <div class="frame-2">
-                    <img class="user" src="../../assets/images/joinform/User.jpg" />
-                    <div class="text-wrapper">이름</div>
-                  </div>
-                </div>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="calendar"><img class="vector" src="../../assets/images/joinform/calendar.jpg" /></div>
-                    <div class="text-wrapper-3">생년월일</div>
-                  </div>
-                </div>
-                <div class="frame-6">
-                  <div class="frame-7">
-                    <img class="user-check" src="../../assets/images/joinform/user-check-01.jpg" />
-                    <div class="frame-8"><div class="text-wrapper-2">성별</div></div>
-                  </div>
-                  <div class="frame-9">
-                    <div class="input"></div>
-                    <div class="text-wrapper-4">남</div>
-                  </div>
-                  <div class="frame-9">
-                    <div class="input"></div>
-                    <div class="text-wrapper-4">여</div>
-                  </div>
-                </div>
-                <div class="frame-10">
-                  <div class="frame-7">
-                    <img class="img" src="../../assets/images/joinform/Users.jpg" />
-                    <div class="frame-11"><div class="text-wrapper-2">구분</div></div>
-                  </div>
-                  <div class="frame-9">
-                    <div class="input"></div>
-                    <div class="text-wrapper-4">트레이너</div>
-                  </div>
-                  <div class="frame-9">
-                    <div class="input"></div>
-                    <div class="text-wrapper-4">회원</div>
-                  </div>
-                </div>
-                <div class="frame-12">
-                  <div class="frame-13">
-                    <img class="img" src="../../assets/images/joinform/Phone.jpg" />
-                    <div class="text-wrapper-3">휴대전화번호</div>
-                  </div>
-                </div>
-              </div>
-              <div class="btn-join"><div class="text-wrapper-5">회원가입</div></div>
-            </div>
+    <div class="card">
+      <a href="">
+        <img src="../../assets/images/logo.jpg" alt="FinLink logo">
+      </a>
+
+      <!-- 아이디 / 비밀번호 -->
+      <div class="form">
+        <!-- 아이디 + 중복확인 -->
+        <div class="row-id">
+          <div class="field field-box">
+            <div class="icon"><i class="fa-regular fa-user"></i></div>
+            <input type="text" placeholder="아이디">
           </div>
-          <div class="frame-14"><div class="text-wrapper-6">중복확인</div></div>
-          <footer class="footer"><p class="p">Copyright © 2025. FitLink All rights reserved.</p></footer>
+          <button type="button" class="btn-dup">중복확인</button>
         </div>
+
+        <!-- 비밀번호 -->
+        <div class="field field-box">
+          <div class="icon"><i class="fa-solid fa-lock"></i></div>
+          <input type="password" placeholder="비밀번호">
+        </div>
+
+        <!-- 이름 -->
+        <div class="field field-line">
+          <div class="icon"><i class="fa-regular fa-user"></i></div>
+          <input type="text" placeholder="이름">
+        </div>
+
+        <!-- 생년월일 -->
+        <div class="field field-line">
+          <div class="icon"><i class="fa-regular fa-calendar"></i></div>
+          <input type="text" placeholder="생년월일">
+        </div>
+
+        <!-- 성별 -->
+        <div class="field field-line">
+          <div class="icon"><i class="fa-solid fa-venus-mars"></i></div>
+          <span>성별</span>
+          <div class="radios">
+            <label><input type="radio" name="gender" value="M"> 남</label>
+            <label><input type="radio" name="gender" value="F"> 여</label>
+          </div>
+        </div>
+
+        <!-- 구분 -->
+        <div class="field field-line">
+          <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
+          <span>구분</span>
+          <div class="radios">
+            <label><input type="radio" name="role" value="trainer"> 트레이너</label>
+            <label><input type="radio" name="role" value="member" checked> 회원</label>
+          </div>
+        </div>
+
+        <!-- 휴대전화번호 -->
+        <div class="field field-line">
+          <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <input type="text" placeholder="휴대전화번호">
+        </div>
+
+      </div>
+      <!-- 회원가입 버튼 -->
+      <button class="btn-submit" type="button">회원가입</button>
+
+      <!-- footer 547x65 -->
+      <div class="footer">
+        Copyright © 2025. FitLink All rights reserved.
       </div>
     </div>
   </body>
+
 </html>
