@@ -12,7 +12,7 @@
 /* ====================main ========================*/
 
 
-/* ====================== memeber.html ============================ */
+/* ====================== workout.html ============================ */
 /* ==================main-header======================= */
 .main-header {
     text-align: center;
@@ -128,9 +128,10 @@
     padding: 16px 20px;
 }
 
-.workout-input h3,
-.rm-weight h3 {
+.workout-input h4,
+.rm-weight h4 {
     font-size: 15px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
@@ -227,7 +228,7 @@
     color: #888;
 }
 
-/* //====================== memeber.html ============================ */
+/* //====================== workout.html ============================ */
 
 /* ====================== inbody.html ============================ */
 
@@ -261,7 +262,7 @@
     height: 1px;
     border: 0;
     background: #E4EDF3;
-    width: 920px;
+    width: 840px;
     margin: 18px auto 0;
     display: block;
 }
@@ -282,7 +283,6 @@
     color: #606060;
 }
 
-.card h2 {}
 
 /* 제목과 표 간격 증가 */
 .list-card .card-header {
@@ -478,7 +478,7 @@
 
 /* inbody 카드 래퍼: 버튼 자리 확보(겹침 방지) */
 .inbody-card-wrap {
-    width: 920px;
+    width: 840px;
     margin: 0 auto;
     position: relative;
     padding-top: 56px
@@ -878,7 +878,7 @@
 
 /* =================== main-box3 ========================= */
 .main-box3 {
-    width: 920px;
+    width: 840px;
     /* 기존 inbody 폭과 맞춤 */
     margin: 26px auto 20px;
     position: relative;
@@ -1033,10 +1033,270 @@
 }
 
 /* //=================== main-box3 ========================= */
-
-
 /* //====================== inbody.html ============================ */
 
+/* ====================== booking status.html ============================ */
+/* -----------------------------공통--------------------------- */
+/* -----------------------제목*/
+/* 페이지 헤더 컨테이너 */
+.page-header {
+    text-align: center;
+    /* 내부 텍스트들을 중앙 정렬 */
+    margin-bottom: 40px;
+    /* 헤더와 아래 리스트 박스 사이의 간격 */
+}
+
+/* 제목 스타일 */
+.page-title {
+    font-size: 42px;
+    font-weight: 600;
+    /* Semi-bold */
+    color: #526b80;
+    /* 이미지와 유사한 차분한 파란색 */
+    margin: 0 0 10px 0;
+    /* 위/좌우 여백 없음, 아래쪽만 10px 여백 */
+}
+
+/* 날짜 스타일 */
+.page-subtitle {
+    font-size: 18px;
+    color: #8a9aaa;
+    /* 제목보다 옅은 회색빛 파란색 */
+    margin: 0;
+    /* 기본 p 태그의 여백 제거 */
+}
+
+/* //-----------------------제목*/
+
+/* -----------------------리스트*/
+.member-list {
+    width: 910px;
+    /* --- 테두리 관련 스타일 추가 --- */
+    background-color: #ffffff;
+    border: 2px solid #ababab;
+    /* 옅은 회색 테두리 */
+    border-radius: 12px;
+    /* 모서리를 부드럽게 (12px) */
+    padding: 5px 20px 5px 30px;
+    box-sizing: border-box;
+    /* 패딩과 테두리가 너비에 영향을 주지 않도록 설정 */
+}
+
+.list-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    /* 제목과 테이블 사이 여백 */
+}
+
+.member-table {
+    width: 100%;
+    border-collapse: separate;
+    /* 테이블 셀 간의 경계가 겹치지 않도록 설정 */
+    border-spacing: 0 10px;
+    /* 셀 간의 수직 간격을 10px로 설정 */
+    text-align: center;
+    /* 기본 텍스트 정렬을 중앙으로 */
+}
+
+/* 테이블 헤더(th)와 데이터(td) 공통 스타일 */
+.member-table th,
+.member-table td {
+    padding: 18px 10px;
+    /* 셀 내부 여백 */
+    font-size: 16px;
+    vertical-align: middle;
+    /* 세로 중앙 정렬 */
+}
+
+/* 테이블 헤더(제목) 스타일 */
+.member-table th {
+    padding: 5px 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #222;
+    border: none;
+    /* 제목(th)의 텍스트가 길어도 줄바꿈되지 않도록 설정합니다. */
+    white-space: nowrap;
+}
+
+/* 이름에만 적용된 링크 스타일 */
+.member-table td a {
+    text-decoration: underline;
+    /* 밑줄 표시 */
+}
+
+.member-table thead th:last-child {
+    width: 80px;
+}
+
+/* tbody의 각 셀(td)에 테두리를 적용하여 카드 모양을 만듭니다. */
+.member-table tbody td {
+    color: #555;
+    border: 1px solid #b9b9b9;
+    border-right: none;
+    border-left: none;
+    font-size: 16px;
+    /* th와 일관성을 위해 폰트 사이즈 추가 */
+    vertical-align: middle;
+    /* th와 일관성을 위해 수직 정렬 추가 */
+}
+
+/* 각 행의 첫 번째와 마지막 셀에 둥근 모서리를 적용합니다. */
+.member-table tbody td:first-child {
+    border-left: 1px solid #b9b9b9;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.member-table tbody td:last-child {
+    border-right: 1px solid #b9b9b9;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: none;
+    /* 셀 사이의 중복되는 세로선을 제거 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* 아이콘 버튼 사이의 간격 */
+}
+
+/* ----------------------- 구분선 */
+.line {
+    width: 910px;
+    height: 1px;
+    background-color: #ababab;
+    margin: 30px 0;
+}
+
+/* //----------------------- 구분선 */
+
+/* 카테고리 제목 (가슴, 등, 어깨) */
+.category-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+/* 아이콘 버튼 기본 스타일 */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    /* td 높이에 맞춤 */
+}
+
+.icon-btn {
+    color: #6c757d;
+    /* 기본 아이콘 색상 */
+    border: none;
+    cursor: pointer;
+}
+
+/* ----------------------- 1. 달력 */
+.calendar {
+    width: 910px;
+    height: 720px;
+    background-color: #ffffff;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 24px;
+}
+
+/* //-----------------------1. 달력 */
+/* //-----------------------------공통--------------------------- */
+/* //====================== booking status.html ============================ */
+
+/* =================================view.html================================= */
+/* ----------------------- 4. 사진 갤러리 */
+/* 각 사진 섹션 (운동, 식단)의 전체 컨테이너 */
+.photo-gallery-section {
+    width: 910px;
+    margin-top: 40px;
+    /* 섹션 간의 상단 여백 */
+}
+
+/* 제목(h4)과 버튼을 감싸는 헤더 */
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽 끝으로 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    margin-bottom: 20px;
+    /* 헤더와 사진 그리드 사이 여백 */
+}
+
+/* 갤러리 제목 (운동사진, 식단사진) */
+.gallery-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* '사진 등록' 버튼 */
+.btn-add-photo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* 아이콘과 텍스트 사이 간격 */
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add-photo:hover {
+    background-color: #f8f9fa;
+}
+
+/* 버튼 내부 아이콘 스타일 */
+.btn-add-photo i {
+    font-size: 14px;
+    color: #777;
+}
+
+/* 사진들이 놓일 그리드 컨테이너(ul) */
+.photo-grid {
+    list-style: none;
+    /* li의 기본 점 제거 */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* 4개의 열을 만들고, 각 열이 동일한 너비를 갖도록 설정 */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* 그리드 아이템 사이의 간격 */
+}
+
+/* 개별 사진이 들어갈 자리(placeholder) */
+.photo-item-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 가로:세로 비율을 1:1로 유지하여 정사각형 모양 생성 */
+    background-color: #f7f7f7;
+    /* 옅은 회색 배경 */
+    border: 1px solid #e9e9e9;
+    /* 배경보다 약간 진한 테두리 */
+    border-radius: 8px;
+    /* 모서리를 둥글게 */
+}
+/* //-----------------------4. 사진 갤러리 */
+/* //=================================view.html================================= */
 
 /* //=================main ======================*/
 /* ///====================content (aside + main) ===================== */
