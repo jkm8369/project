@@ -277,10 +277,11 @@
 }
 
 .list-card .list-title {
-    font-size: 20px;
-    font-weight: 700;
-    /* bold */
-    color: #606060;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    /* 제목과 테이블 사이 여백 */
 }
 
 
@@ -796,7 +797,7 @@
     height: 4px
 }
 
-.progress--pink .progress-fill {
+.progress-pink .progress-fill {
     background: #F08A94
 }
 
@@ -928,9 +929,9 @@
     gap: 14px;
 }
 
-.mb3-row--top {
+.mb3-row-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
     gap: 12px;
 }
 
@@ -942,11 +943,11 @@
     padding: 16px 18px;
 }
 
-.mb3-card--sm {
-    height: 166px;
+.mb3-card-sm {
+    height: 250px;
 }
 
-.mb3-card--full {
+.mb3-card-full {
     margin-top: 6px;
 }
 
@@ -994,7 +995,7 @@
 .m-value {
     font-weight: 800;
     font-size: 28px;
-    padding-right: 60px;
+    padding-right: 30px;
 }
 
 .m-value.blue {
@@ -1295,6 +1296,7 @@
     border-radius: 8px;
     /* 모서리를 둥글게 */
 }
+
 /* //-----------------------4. 사진 갤러리 */
 /* //=================================view.html================================= */
 
