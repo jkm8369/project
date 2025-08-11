@@ -40,7 +40,6 @@ body {
 /* 모달 박스 */
 .modal-container {
   width: 336px;
-  /* 네가 준 규격 유지 */
   background-color: #fff;
   border-radius: 16px;
   padding: 24px;
@@ -65,7 +64,7 @@ body {
 
 /* 제목 */
 .modal-title {
-  margin: 0 0 16px;
+  margin: 20px 16px;
   text-align: center;
   font-size: 14px;
   font-weight: 700;
@@ -75,6 +74,7 @@ body {
 /* 내용 */
 .modal-content {
   margin-bottom: 16px;
+  margin-top: 20px;
 }
 
 .preview {
@@ -143,9 +143,9 @@ body {
   height: 28px;
   border: none;
   border-radius: 50%;
-  background: transparent;
+  background: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
   color: #9ca3af;
 }
@@ -200,30 +200,6 @@ body {
 
 .modal-overlay.is-open {
   display: flex;
-}
-
-/* === Modal Container (status) === */
-.modal-container.modal-status {
-  width: 300px;
-  /* 스샷처럼 작은 정사각 느낌 */
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 24px 20px;
-  text-align: center;
-  animation: modal-pop .18s ease;
-}
-
-@keyframes modal-pop {
-  from {
-    transform: translateY(4px);
-    opacity: .92;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* === Circle Icon (CSS 스피너) === */

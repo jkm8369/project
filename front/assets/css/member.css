@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-
+/* -----------------------------공통--------------------------- */
 :root {
     --primary: #2A94D6;
     --gray: #6b7280;
@@ -9,6 +9,15 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    /* 제목과 테이블 사이 여백 */
+}
+
+/* //-----------------------------공통--------------------------- */
 /* ====================main ========================*/
 
 
@@ -62,9 +71,9 @@
     width: 588px;
     height: 166px;
     background: #fff;
-    border: 3px solid var(--primary);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    border: 2px solid #ababab;
+    /* 옅은 회색 테두리 */
+    border-radius: 12px;
     padding: 20px;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -72,7 +81,6 @@
 
 .summary-box p {
     text-align: center;
-    padding-top: 10px;
 }
 
 .rm-box p {
@@ -81,16 +89,13 @@
 
 .summary-box .summary-box-header,
 .rm-box .rm-box-header {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 6px;
     text-align: center;
 }
 
 .stats {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -128,12 +133,7 @@
     padding: 16px 20px;
 }
 
-.workout-input h4,
-.rm-weight h4 {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
+
 
 .set-form {
     width: 870px;
@@ -151,15 +151,16 @@
 
 .set-form select,
 .set-form input {
+    width: 121px;
+    height: 34px;
     background-color: #fff;
-    /* 옅은 하늘색 */
     border: none;
     border-radius: 8px;
-    padding: 8px 12px;
-    margin-right: 6px;
+    padding: 4px 8px;
     font-size: 14px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 
 .set-form input::placeholder {
     color: #aaa;
@@ -176,11 +177,9 @@
 .set-form button {
     width: 34px;
     height: 34px;
-    background-color: var(--primary);
-    color: white;
-    font-size: 18px;
+    color: rgb(85, 6, 6);
+    font-size: 34px;
     border: none;
-    border-radius: 6px;
     line-height: 1;
 }
 
@@ -194,18 +193,19 @@
 
 /* 각 항목 */
 .set-item {
-    width: 840px;
+    width: 870px;
     max-height: 56px;
     display: grid;
-    grid-template-columns: 0.33fr 0.4fr 0.3fr 0.3fr 0.3fr 0.3fr 0.1fr 0.14fr;
+    /* 입력 폼의 select/input/텍스트와 동일한 column 비율 사용 */
+    grid-template-columns: 155px 200px 130px 50px 40px 135px 35px 30px;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     padding: 12px 16px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    margin-bottom: 10px;
     font-size: 15px;
+    box-sizing: border-box;
 }
 
 /* 항목 내부 텍스트 간격 */
@@ -215,7 +215,7 @@
 }
 
 .set-item span:first-child {
-    margin-left: 15px;
+    margin-left: 13px;
 }
 
 /* 삭제 버튼 */
@@ -223,7 +223,8 @@
     margin-left: auto;
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 800;
     cursor: pointer;
     color: #888;
 }
@@ -270,20 +271,12 @@
 /* 카드(리스트) */
 .card {
     background: #fff;
-    border: 1px solid #D8E3EB;
+    border: 2px solid #ababab;
+    /* 옅은 회색 테두리 */
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(31, 41, 55, 0.05);
     padding: 16px 18px;
 }
-
-.list-card .list-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 25px;
-    /* 제목과 테이블 사이 여백 */
-}
-
 
 /* 제목과 표 간격 증가 */
 .list-card .card-header {
@@ -292,12 +285,6 @@
 
 .card-header {
     margin-bottom: 8px;
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #334155;
 }
 
 /* 테이블 */
@@ -501,26 +488,21 @@
 
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-
-    height: 28px;
+    gap: 8px;
+    border-radius: 8px;
+    height: 40px;
     /* 작게 */
-    padding: 0 12px;
+    padding: 10px 18px;
     /* 좌우 여백 */
-    border-radius: 14px;
-    /* 라운드(스크린샷 느낌) */
-    font-size: 12px;
+    font-size: 16px;
     /* 작은 글씨 */
-    font-weight: 600;
-    letter-spacing: -0.2px;
-    color: #5f6b75;
+    font-weight: 500;
+    font-family: inherit;
+    color: #333333;
 
-    border: 1px solid #D7DCE2;
+    border: 1px solid #dcdcdc;
     /* 연회색 윤곽 */
-    background: linear-gradient(#FFFFFF, #F6F8FA);
-    /* 은은한 밝기 */
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-    /* 아주 약한 그림자 */
+    background-color: #ffffff;
 
     cursor: pointer;
     user-select: none;
@@ -931,32 +913,28 @@
 
 .mb3-row-top {
     display: grid;
-    grid-template-columns: 0.6fr 1fr;
+    grid-template-columns: 0.4fr 1fr;
     gap: 12px;
 }
 
 .mb3-card {
     background: #fff;
-    border: 1px solid #D8E3EB;
+    border: 2px solid #ababab;
+    /* 옅은 회색 테두리 */
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(31, 41, 55, .05);
     padding: 16px 18px;
 }
 
 .mb3-card-sm {
-    height: 250px;
+    max-height: 280px;
 }
 
 .mb3-card-full {
     margin-top: 6px;
 }
 
-.mb3-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #334155;
-    margin-bottom: 8px;
-}
+
 
 /* 좌 카드 – 파란 숫자 강조 */
 .mb3-metrics {
@@ -967,6 +945,7 @@
 }
 
 .metric-line {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -995,7 +974,6 @@
 .m-value {
     font-weight: 800;
     font-size: 28px;
-    padding-right: 30px;
 }
 
 .m-value.blue {
@@ -1008,6 +986,7 @@
     border-collapse: collapse;
     table-layout: fixed;
     font-size: 13px;
+    font-weight: 500;
 }
 
 .mb3-table thead th {
@@ -1025,13 +1004,27 @@
     color: #374151;
 }
 
-.mb3-table tfoot .sum td {
-    font-weight: 700;
+.mb3-table tfoot {
+   background-color: #DAE6F0;
 }
 
-.mb3-table tfoot .goal td {
-    color: #64748b;
+.mb3-table tfoot tr:first-child td:first-child {
+    border-top-left-radius: 10px;
 }
+
+.mb3-table tfoot tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+.mb3-table tfoot tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.mb3-table tfoot tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; 
+}
+
+
 
 /* //=================== main-box3 ========================= */
 /* //====================== inbody.html ============================ */
@@ -1081,14 +1074,6 @@
     padding: 5px 20px 5px 30px;
     box-sizing: border-box;
     /* 패딩과 테두리가 너비에 영향을 주지 않도록 설정 */
-}
-
-.list-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 25px;
-    /* 제목과 테이블 사이 여백 */
 }
 
 .member-table {
@@ -1295,6 +1280,31 @@
     /* 배경보다 약간 진한 테두리 */
     border-radius: 8px;
     /* 모서리를 둥글게 */
+}
+
+/* 삭제 버튼 위치 */
+.photo-item-placeholder {
+    position: relative; /* 버튼의 기준점 */
+}
+
+.btn-delete-photo {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #6c757d;
+    border: none;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-delete-photo:hover {
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 /* //-----------------------4. 사진 갤러리 */

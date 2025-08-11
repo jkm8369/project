@@ -84,7 +84,7 @@
 
         <div class="box2">
           <section class="summary-box">
-            <p class="summary-box-header">총 세트 수행</p>
+            <h4 class="summary-box-header">총 세트 수행</h4>
             <p>0개 운동 등록 수행</p>
             <div class="stats">
               <div>최고 중량<br><strong>0</strong></div>
@@ -99,19 +99,24 @@
             <form class="set-form">
               <select>
                 <option>부위</option>
-                <option>부위</option>
-                <option>부위</option>
-                <option>운동</option>
+                <option>가슴</option>
+                <option>등</option>
               </select>
+
               <select>
                 <option>운동</option>
-                <option>운동</option>
-                <option>운동</option>
-                <option>운동</option>
+                <option>벤치프레스</option>
+                <option>스쿼트</option>
               </select>
-              <input type="text" placeholder="무게" />kg
-              <input type="text" placeholder="횟수" />회
-              <button type="submit">+</button>
+
+              <span>무게</span>
+              <input type="text" placeholder="숫자" />
+              <span>kg</span>
+              <span>×</span>
+              <input type="text" placeholder="숫자" />
+              <span>회</span>
+
+              <button type="submit" class="btn-plus">+</button>
             </form>
 
             <!-- -- + 클릭시 추가되는 폼 (js)-- -->
@@ -152,7 +157,7 @@
 
         <div class="box3">
           <section class="rm-box">
-            <p class="rm-box-header">1RM</p>
+            <h4 class="rm-box-header">1RM</h4>
             <div class="rm-stats">
               <div>벤치프레스<br /><strong>120</strong></div>
               <div>데드리프트<br /><strong>220</strong></div>
@@ -166,13 +171,24 @@
             <form class="set-form">
               <select>
                 <option>부위</option>
+                <option>가슴</option>
+                <option>등</option>
               </select>
+
               <select>
                 <option>운동</option>
+                <option>벤치프레스</option>
+                <option>스쿼트</option>
               </select>
-              <input type="text" placeholder="무게">kg
-              <input type="text" placeholder="횟수">회
-              <button type="submit">+</button>
+
+              <span>무게</span>
+              <input type="text" placeholder="숫자" />
+              <span>kg</span>
+              <span>×</span>
+              <input type="text" placeholder="숫자" />
+              <span>회</span>
+
+              <button type="submit" class="btn-plus">+</button>
             </form>
 
             <!-- -- + 클릭시 추가되는 폼 (js)-- -->

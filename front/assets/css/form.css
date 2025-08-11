@@ -62,7 +62,7 @@ body {
 /* ========================= joinform ========================== */
 /* joinform 필드 래퍼 (330x51) */
 .field {
-    width: 330px;
+    width: 412px;
     height: 51px;
     display: flex;
     align-items: center;
@@ -108,9 +108,9 @@ body {
 
 /* 밑줄형(회색 라인) */
 .field-line {
-    width: 330px;
+    width: 412px;
     border-bottom: 1px solid var(--line);
-    padding: 0 4px;
+    padding: 0  0 4px 15px;
     color: #9aa3ad;
     /* 플레이스홀더처럼 보이게 */
     font-size: 14px;
@@ -157,6 +157,19 @@ body {
     accent-color: var(--primary);
 }
 
+/* 회원가입 버튼(412x50) */
+.btn-submit {
+    width: 412px;
+    height: 51px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 32px 0px 28px 20px;
+}
 /* //========================= joinform ========================== */
 
 /* ========================= loginform ========================== */
@@ -203,12 +216,9 @@ body {
     text-decoration: underline;
 }
 
-/* //========================= loginform ========================== */
-
-/* 회원가입 로그인 버튼(412x50) */
-.btn-submit {
+.btn-login {
     width: 412px;
-    height: 50px;
+    height: 51px;
     border: none;
     border-radius: 8px;
     background: var(--primary);
@@ -216,8 +226,12 @@ body {
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    margin: 32px 0 28px;
+    margin: 32px 0px 28px 0px;
 }
+
+/* //========================= loginform ========================== */
+
+
 
 /* footer(547x65) */
 .footer {
