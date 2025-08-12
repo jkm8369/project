@@ -82,16 +82,17 @@ aside {
 
 .user-info {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     margin-bottom: 30px;
+    margin-right: 40px;
 }
 
 .user-name-wrap {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 6px;
 }
 
 .dumbell-icon {
@@ -107,16 +108,19 @@ aside {
 .user-name small {
     font-size: 12px;
     color: #aaa;
+    display: block;
 }
 
 .trainer-info {
     display: flex;
     align-items: center;
+    gap: 6px;
     font-size: 13px;
     font-weight: bold;
     color: #333;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2px;
+    margin-left: 30px;
 }
 
 .trainer-info span {
