@@ -82,16 +82,15 @@ aside {
 
 .user-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 30px;
-    margin-right: 60px;
 }
 
 .user-name-wrap {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     margin-bottom: 6px;
 }
 
