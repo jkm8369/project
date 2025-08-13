@@ -258,7 +258,7 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 230px;
+  margin-bottom: 170px;
   margin-left: auto;
   gap: 8px;
   /* 아이콘과 텍스트 사이 간격 */
@@ -400,7 +400,7 @@
 .category-buttons {
   display: flex;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 24px;
   gap: 10px;
 }
 
@@ -417,7 +417,7 @@
 
 /* --- 5. 내가 선택한 리스트 --- */
 .select-box {
-  width: 910px;
+  width: 896px;
   justify-content: space-around;
   background-color: #fff;
   border: 2px solid #ababab;
@@ -456,11 +456,10 @@
 
 .checkbox-grid {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-right: 4px;
   display: grid;
-  grid-template-columns: repeat(3, 280px);
-  gap: 25px;
+  grid-template-columns: repeat(3, 287px);
+  gap: 24px;
 }
 
 .checkbox-item {

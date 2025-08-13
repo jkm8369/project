@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
     --primary: #2A94D6;
     --gray: #6b7280;
@@ -84,7 +86,7 @@ aside {
     border-right: 1px solid #B9B9B9;
     flex-shrink: 0;
     /* 사이드바 찌그러짐 방지 */
-    min-width: 200px;
+
 }
 
 .user-info {
@@ -114,6 +116,7 @@ aside {
 
 .user-name small {
     font-size: 12px;
+    padding-top: 3px;
     color: #aaa;
     display: block;
 }

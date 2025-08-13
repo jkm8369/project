@@ -230,17 +230,3 @@ body {
 }
 
 /* //========================= loginform ========================== */
-
-
-
-/* footer(547x65) */
-.footer {
-    width: 547px;
-    height: 65px;
-    border-top: 1px solid var(--line);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #94a3b8;
-    font-size: 13px;
-}

@@ -1015,7 +1015,7 @@ h4 {
 }
 
 .mb3-table tfoot {
-   background-color: #DAE6F0;
+    background-color: #DAE6F0;
 }
 
 .mb3-table tfoot tr:first-child td:first-child {
@@ -1031,7 +1031,7 @@ h4 {
 }
 
 .mb3-table tfoot tr:last-child td:last-child {
-    border-bottom-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
 }
 
 
@@ -1296,7 +1296,8 @@ h4 {
 
 /* 삭제 버튼 위치 */
 .photo-item-placeholder {
-    position: relative; /* 버튼의 기준점 */
+    position: relative;
+    /* 버튼의 기준점 */
 }
 
 .btn-delete-photo {
