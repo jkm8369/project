@@ -1,3 +1,11 @@
+:root {
+    --primary: #2A94D6;
+    --gray: #6b7280;
+    --light-bg: #f9fbfc;
+    --border-radius: 10px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 /* ===================전체 틀============================ */
 body {
     display: flex;
@@ -35,7 +43,6 @@ header .btn-logout img {
     /* 로고 이미지의 높이를 원하는 크기로 직접 지정합니다. */
     height: 40px;
     /* 예시로 40px로 설정, 원하시면 더 조절 가능합니다. */
-
     display: block;
     /* 이미지 하단의 불필요한 여백 제거 */
 }
@@ -222,7 +229,7 @@ footer p {
     color: var(--gray);
     padding: 16px 0px;
     border-top: 1px solid #e5e7eb;
-    margin-top: 2px;
+    margin-top: 20px;
     padding-left: 100px;
     padding-top: 30px;
 }

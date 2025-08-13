@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/css/reset.css" />
     <link rel="stylesheet" href="../../assets/css/include.css" />
     <link rel="stylesheet" href="../../assets/css/trainer.css" />
+    <link rel="stylesheet" href="../../assets/css/member.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -65,6 +66,10 @@
         </aside>
 
         <main>
+          <div class="page-header">
+            <h3 class="page-title">Members</h3>
+            <p class="page-subtitle">2025년 7월 20일</p>
+          </div>
           <!-- 1. 달력 -->
           <div class="calendar">
             <!-- 나중에 이 자리에 실제 달력 코드가 들어갑니다. -->
@@ -75,77 +80,78 @@
           <div class="line"></div>
           <!-- //2. 구분선 -->
 
-          <!-- 3. 회원수업 리스트 섹션 -->
-          <div class="member-list">
-            <h4 class="list-title">회원수업 리스트</h4>
+          <!-- 4. 트레이너 수업 리스트 섹션 -->
+        <section class="card2 list-card">
+          <div class="card-header">
+            <h4 class="card-title list-title">회원 수업 리스트</h4>
+          </div>
 
-            <!-- 회원 목록 테이블: 이 부분은 나중에 백엔드 데이터로 채워집니다. -->
-            <table class="member-table">
-              <!-- 테이블 헤더 -->
+          <div class="table-wrap">
+            <table class="table">
+              <colgroup>
+                <col class="w-60"> <!-- 순서 -->
+                <col class="w-110"> <!-- 날짜 -->
+                <col class="w-90"> <!-- 시간 -->
+                <col class="w-90"> <!-- 회원(가변) -->
+                <col class="w-100"> <!-- PT 등록일수 -->
+                <col class="w-100"> <!-- PT 수업일수 -->
+                <col class="w-100"> <!-- PT 잔여일수 -->
+                <col class="w-80"> <!-- actions -->
+              </colgroup>
               <thead>
                 <tr>
+                  <th>순서</th>
+                  <th>날짜</th>
                   <th>시간</th>
-                  <th>이름</th>
-                  <th>나이</th>
+                  <th>회원</th>
                   <th>PT 등록일수</th>
                   <th>PT 수업일수</th>
                   <th>PT 잔여일수</th>
+                  <th class="actions-head"></th>
                 </tr>
               </thead>
-              <!-- 테이블 본문 (데이터가 들어갈 부분) -->
               <tbody>
-                <!-- 예시 데이터 1 -->
                 <tr>
-                  <td>10:00</td>
-                  <td><a href="#">홍길동</a></td>
-                  <td>20세</td>
-                  <td>30회</td>
-                  <td>10회</td>
-                  <td>20회</td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="icon-btn" aria-label="취소">
-                        <i class="fa-solid fa-xmark"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- 예시 데이터 2 -->
-                <tr>
-                  <td>12:00</td>
-                  <td>김미미</td>
-                  <td>30세</td>
-                  <td>40회</td>
-                  <td>10회</td>
-                  <td>30회</td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="icon-btn" aria-label="취소">
-                        <i class="fa-solid fa-xmark"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- 예시 데이터 3 -->
-                <tr>
+                  <td>1</td>
+                  <td>2025.07.01</td>
                   <td>14:00</td>
-                  <td>이동수</td>
-                  <td>40세</td>
-                  <td>50회</td>
-                  <td>10회</td>
-                  <td>40회</td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="icon-btn" aria-label="취소">
-                        <i class="fa-solid fa-xmark"></i>
-                      </button>
-                    </div>
+                  <td class="truncate" title="조강민">조강민</td>
+                  <td>30회</td>
+                  <td>1회</td>
+                  <td>29회</td>
+                  <td class="actions">
+                    <button class="icon-btn" aria-label="취소"><i class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2025.07.14</td>
+                  <td>15:00</td>
+                  <td class="truncate" title="김동민">김동민</td>
+                  <td>30회</td>
+                  <td>2회</td>
+                  <td>28회</td>
+                  <td class="actions">
+                    <button class="icon-btn" aria-label="취소"><i class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2025.07.20</td>
+                  <td>18:00</td>
+                  <td class="truncate" title="김동민">김동민</td>
+                  <td>30회</td>
+                  <td>3회</td>
+                  <td>27회</td>
+                  <td class="actions">
+                    <button class="icon-btn" aria-label="취소"><i class="fa-solid fa-xmark"></i></button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <!-- //3. 회원수업 리스트 섹션 -->
+        </section>
+        <!-- //4. 트레이너 수업 리스트 섹션 -->
         </main>
       </div>
 
