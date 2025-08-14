@@ -17,28 +17,28 @@
         </a>
 
         <!-- 아이디 / 비밀번호 -->
-        <div class="form-login">
-            <!-- 아이디 + 중복확인 -->
+        <form class="form-login" action="/user/login" method="get">
+            <!-- 아이디 -->
             <div class="field-login field-box">
                 <div class="icon"><i class="fa-regular fa-user"></i></div>
-                <input type="text" placeholder="아이디">
+                <input type="text" name="loginId" placeholder="아이디">
             </div>
 
             <!-- 비밀번호 -->
             <div class="field-login field-box">
                 <div class="icon"><i class="fa-solid fa-lock"></i></div>
-                <input type="password" placeholder="비밀번호">
+                <input type="password" name="password" placeholder="비밀번호">
             </div>
-        </div>
-        <!-- 회원가입 버튼 -->
-        <button class="btn-login" type="button">로그인</button>
+            <!-- 회원가입 버튼 -->
+            <button class="btn-login" type="submit">로그인</button>
+        </form>
 
         <div class="links">
             <a href="#">비밀번호 찾기</a>
             <a href="#">아이디 찾기</a>
             <a href="#">회원가입</a>
         </div>
-        
+
     </div>
 </body>
 
