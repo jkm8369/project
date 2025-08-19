@@ -80,158 +80,200 @@
             <h3 class="main-title">Workout Log</h3>
             <p class="main-subtitle">2025년 8월 7일</p>
           </div>
-        </div>
+          <!-- 제목/아이콘 영역 (예: WorkoutLog 옆) -->
+          <div class="wl-head">
+            <!-- 캘린더 열기 아이콘 버튼 -->
+            <button id="btnOpenCalendar" class="icon-btn" type="button" aria-label="날짜 선택">
+              <!-- 작은 캘린더 아이콘 (SVG) -->
+              <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10h5v5H7z"></path>
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12
+               c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9z"></path>
+              </svg>
+            </button>
+          </div>
 
-        <div class="box2">
-          <section class="summary-box">
-            <h4 class="summary-box-header">총 세트 수행</h4>
-            <p>0개 운동 등록 수행</p>
-            <div class="stats">
-              <div>최고 중량<br><strong>0</strong></div>
-              <div>총 반복수<br><strong>0</strong></div>
-              <div>총 볼륨<br><strong>0</strong></div>
+          <!-- 모달 달력 -->
+          <div id="calendarModal" class="cal-modal-overlay" aria-hidden="true">
+            <div class="cal-modal" role="dialog" aria-modal="true" aria-labelledby="calTitle">
+              <div class="cal-header">
+                <button type="button" class="cal-nav" id="calPrev" aria-label="이전 달">&#10094;</button>
+                <h3 id="calTitle" class="cal-title"></h3>
+                <button type="button" class="cal-nav" id="calNext" aria-label="다음 달">&#10095;</button>
+              </div>
+              <div class="cal-grid">
+                <div class="cal-dow">일</div>
+                <div class="cal-dow">월</div>
+                <div class="cal-dow">화</div>
+                <div class="cal-dow">수</div>
+                <div class="cal-dow">목</div>
+                <div class="cal-dow">금</div>
+                <div class="cal-dow">토</div>
+                <!-- 날짜 셀은 JS로 렌더 -->
+                <div id="calDays" class="cal-days"></div>
+              </div>
+              <div class="cal-footer">
+                <button type="button" id="calToday" class="btn-floating">오늘</button>
+                <button type="button" id="calClose" class="btn-floating">닫기</button>
+              </div>
             </div>
-          </section>
+          </div>
 
-          <section class="workout-input">
-            <h4>오늘의 운동</h4>
-            <!-- -- 운동 입력 폼 -- -->
-            <form class="set-form">
-              <select>
-                <option>부위</option>
-                <option>가슴</option>
-                <option>등</option>
-              </select>
-
-              <select>
-                <option>운동</option>
-                <option>벤치프레스</option>
-                <option>스쿼트</option>
-              </select>
-
-              <span>무게</span>
-              <input type="text" placeholder="숫자" />
-              <span>kg</span>
-              <span>×</span>
-              <input type="text" placeholder="숫자" />
-              <span>회</span>
-
-              <button type="submit" class="btn-plus">+</button>
-            </form>
-
-            <!-- -- + 클릭시 추가되는 폼 (js)-- -->
-            <div class="set-list">
-              <div class="set-item">
-                <span>가슴</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-              <div class="set-item">
-                <span>어깨</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-              <div class="set-item">
-                <span>복근</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-
-          </section>
+          <!-- 실제 선택 날짜를 보관하는 hidden input (AJAX용) -->
+          <input type="hidden" id="pickDate" />
         </div>
 
-        <div class="box3">
-          <section class="rm-box">
-            <h4 class="rm-box-header">1RM</h4>
-            <div class="rm-stats">
-              <div>벤치프레스<br /><strong>120</strong></div>
-              <div>데드리프트<br /><strong>220</strong></div>
-              <div>스쿼트<br /><strong>200</strong></div>
-            </div>
-          </section>
 
-
-          <section class="rm-weight">
-            <h4>1RM 무게</h4>
-            <form class="set-form">
-              <select>
-                <option>부위</option>
-                <option>가슴</option>
-                <option>등</option>
-              </select>
-
-              <select>
-                <option>운동</option>
-                <option>벤치프레스</option>
-                <option>스쿼트</option>
-              </select>
-
-              <span>무게</span>
-              <input type="text" placeholder="숫자" />
-              <span>kg</span>
-              <span>×</span>
-              <input type="text" placeholder="숫자" />
-              <span>회</span>
-
-              <button type="submit" class="btn-plus">+</button>
-            </form>
-
-            <!-- -- + 클릭시 추가되는 폼 (js)-- -->
-            <div class="set-list">
-              <div class="set-item">
-                <span>가슴</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-              <div class="set-item">
-                <span>어깨</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-              <div class="set-item">
-                <span>복근</span>
-                <span>운동</span>
-                <span>100</span>
-                <span>kg</span>
-                <span>✕</span>
-                <span>1</span>
-                <span>회</span>
-                <button class="remove-btn">—</button>
-              </div>
-
-          </section>
+    <div class="box2">
+      <section class="summary-box">
+        <h4 class="summary-box-header">총 세트 수행</h4>
+        <p>0개 운동 등록 수행</p>
+        <div class="stats">
+          <div>최고 중량<br><strong>0</strong></div>
+          <div>총 반복수<br><strong>0</strong></div>
+          <div>총 볼륨<br><strong>0</strong></div>
         </div>
-      </main>
+      </section>
+
+      <section class="workout-input">
+        <h4>오늘의 운동</h4>
+        <!-- -- 운동 입력 폼 -- -->
+        <form class="set-form">
+          <select>
+            <option>부위</option>
+            <option>가슴</option>
+            <option>등</option>
+          </select>
+
+          <select>
+            <option>운동</option>
+            <option>벤치프레스</option>
+            <option>스쿼트</option>
+          </select>
+
+          <span>무게</span>
+          <input type="text" placeholder="숫자" />
+          <span>kg</span>
+          <span>×</span>
+          <input type="text" placeholder="숫자" />
+          <span>회</span>
+
+          <button type="submit" class="btn-plus">+</button>
+        </form>
+
+        <!-- -- + 클릭시 추가되는 폼 (js)-- -->
+        <div class="set-list">
+          <div class="set-item">
+            <span>가슴</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+          <div class="set-item">
+            <span>어깨</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+          <div class="set-item">
+            <span>복근</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+
+      </section>
     </div>
 
-    <footer>
-      <p>Copyright © 2025. FitLink All rights reserved.</p>
-    </footer>
+    <div class="box3">
+      <section class="rm-box">
+        <h4 class="rm-box-header">1RM</h4>
+        <div class="rm-stats">
+          <div>벤치프레스<br /><strong>120</strong></div>
+          <div>데드리프트<br /><strong>220</strong></div>
+          <div>스쿼트<br /><strong>200</strong></div>
+        </div>
+      </section>
+
+
+      <section class="rm-weight">
+        <h4>1RM 무게</h4>
+        <form class="set-form">
+          <select>
+            <option>부위</option>
+            <option>가슴</option>
+            <option>등</option>
+          </select>
+
+          <select>
+            <option>운동</option>
+            <option>벤치프레스</option>
+            <option>스쿼트</option>
+          </select>
+
+          <span>무게</span>
+          <input type="text" placeholder="숫자" />
+          <span>kg</span>
+          <span>×</span>
+          <input type="text" placeholder="숫자" />
+          <span>회</span>
+
+          <button type="submit" class="btn-plus">+</button>
+        </form>
+
+        <!-- -- + 클릭시 추가되는 폼 (js)-- -->
+        <div class="set-list">
+          <div class="set-item">
+            <span>가슴</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+          <div class="set-item">
+            <span>어깨</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+          <div class="set-item">
+            <span>복근</span>
+            <span>운동</span>
+            <span>100</span>
+            <span>kg</span>
+            <span>✕</span>
+            <span>1</span>
+            <span>회</span>
+            <button class="remove-btn">—</button>
+          </div>
+
+      </section>
+    </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © 2025. FitLink All rights reserved.</p>
+  </footer>
   </div>
 </body>
 
